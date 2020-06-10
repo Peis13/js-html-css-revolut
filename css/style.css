@@ -14,6 +14,7 @@ body {
 
 a {
   text-decoration: none;
+  color: inherit;
 }
 
 ul {
@@ -23,6 +24,28 @@ ul {
 img {
   width: 100%;
   vertical-align: middle;
+}
+/* FINE STILI COMUNI */
+
+/*           HEADER           */
+/* NAVBAR */
+.navbar {
+  height: 70px;
+  padding: 0 100px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+  color: #b1b6bc;
+}
+
+.navbar a.active {
+  color: #1c1c1c;
+}
+.logo {
+  width: 100px;
+  margin-right: 30px;
 }
 
 .navbar .logo,
@@ -41,6 +64,11 @@ img {
   margin-left: 30px;
 }
 
+.navbar .menu > li a:hover {
+  color: #1c1c1c;
+  transition: 0.3s;
+}
+
 .plan,
 .lingua {
   text-transform: uppercase;
@@ -48,6 +76,10 @@ img {
 
 .navigazione {
   text-transform: capitalize;
+}
+
+.freccia i {
+  font-size: 10px;
 }
 
 .cta {
@@ -59,40 +91,53 @@ img {
   background-color: #eb008d;
 }
 
-.con-dropdown {
+.cta:hover {
   cursor: pointer;
+  transform: scale(1.1);
+  opacity: 0.7;
+  transition: 0.3s;
+}
+
+/* Dropdown */
+.con-dropdown {
   position: relative;
 }
 
 .dropdown {
   display: none;
-  padding: 20px 30px;
   position: absolute;
   top: 100%;
   left: 50%;
   transform: translateX(-50%);
-  background-color: red;
+  box-shadow: 0px 0px 10px 0px lightgray;
 }
-/* FINE STILI COMUNI */
 
-/*           HEADER           */
-/* NAVBAR */
-.navbar {
-  height: 70px;
-  padding: 0 100px;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
+.dropdown li {
+  white-space: nowrap;
+  padding: 15px 25px;
 }
-.navbar-left {
-  background-color: yellow;
+
+.dropdown li:hover {
+  color: #1c1c1c;
+  background-color: #f1f1f1;
+  transition: 0.3s;
 }
-.navbar-right {
-  background-color: pink;
+
+.nuovo {
+  padding-right: 40px;
+  position: relative;
 }
-.logo {
-  width: 100px;
-  margin-right: 30px;
+
+.nuovo:after {
+  content: 'Nuovo';
+  color: #eb008d;
+  font-size: 12px;
+  margin-left: 6px;
+  position: absolute;
+  top: 0;
+  left: 100;
+  transform: translateY(-50%);
 }
+/* Fine Dropdown */
 /* FINE NAVBAR */
 /*           FINE HEADER           */

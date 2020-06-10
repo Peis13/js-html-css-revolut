@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Revolut</title>
     <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css">
     <link rel="stylesheet" href="css/style.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
   </head>
@@ -28,7 +29,7 @@
           <!-- plan -->
           <ul class="menu plan">
             <li>
-              <a href="#">
+              <a href="#" class="active">
                 personale
               </a>
             </li>
@@ -52,11 +53,79 @@
                 tariffazione
               </a>
             </li>
-            <li>
-              conti
+            <li id="conti" class="con-dropdown">
+              <a href="#">
+                conti
+              </a>
+              <ul class="dropdown">
+                <li>
+                  <a href="#">
+                    Standard
+                  </a>
+                </li>
+                <li>
+                  <a href="#">
+                    Premuim
+                  </a>
+                </li>
+                <li>
+                  <a href="#">
+                    Metal
+                  </a>
+                </li>
+                <li>
+                  <a href="#" class="nuovo">
+                    junior
+                  </a>
+                </li>
+              </ul>
             </li>
-            <li class="con-dropdown">
-              prodotto
+            <li id="prodotti" class="con-dropdown">
+              <a href="#">
+                prodotti
+              </a>
+              <ul class="dropdown">
+                <li>
+                  <a href="#">
+                    Invia denaro all'estero
+                  </a>
+                </li>
+                <li>
+                  <a href="#">
+                    Effettua e ricevi pagamenti
+                  </a>
+                </li>
+                <li>
+                  <a href="#">
+                    imposta i Salvadanai
+                  </a>
+                </li>
+                <li>
+                  <a href="#">
+                    imposta i budget
+                  </a>
+                </li>
+                <li>
+                  <a href="#">
+                    Paga con Apple Pay
+                  </a>
+                </li>
+                <li>
+                  <a href="#" class="nuovo">
+                    Dona agli enti di beneficienza
+                  </a>
+                </li>
+                <li>
+                  <a href="#">
+                    tutelati
+                  </a>
+                </li>
+              </ul>
+            </li>
+            <li id="azienda" class="con-dropdown">
+              <a href="#">
+                azienda
+              </a>
               <ul class="dropdown">
                 <li>
                   <a href="#">
@@ -74,7 +143,7 @@
                   </a>
                 </li>
                 <li>
-                  <a href="#">
+                  <a href="#" class="nuovo">
                     Affiliates
                   </a>
                 </li>
@@ -85,44 +154,68 @@
                 </li>
               </ul>
             </li>
-            <li class="con-dropdown">
-              azienda
+            <li id="aiuto" class="con-dropdown freccia">
+              <a href="#">
+                aiuto
+              </a>
               <ul class="dropdown">
                 <li>
                   <a href="#">
-                    Chi siamo
+                    Community
                   </a>
                 </li>
                 <li>
                   <a href="#">
-                    Blog
+                    Centro Assistenza
                   </a>
                 </li>
                 <li>
                   <a href="#">
-                    Lavora con noi
+                    Sicurezza
                   </a>
                 </li>
                 <li>
                   <a href="#">
-                    Affiliates
+                    Stato di sistema
+                  </a>
+                </li>
+              </ul>
+            </li>
+            <li id="lingua" class="lingua con-dropdown freccia">
+              <a href="#">
+                it
+                <i class="fas fa-chevron-down"></i>
+              </a>
+              <ul class="dropdown">
+                <li>
+                  <a href="#">
+                    en
                   </a>
                 </li>
                 <li>
                   <a href="#">
-                    Contatto
+                    it
+                  </a>
+                </li>
+                <li>
+                  <a href="#">
+                    ger
+                  </a>
+                </li>
+                <li>
+                  <a href="#">
+                    sp
+                  </a>
+                </li>
+                <li>
+                  <a href="#">
+                    fr
                   </a>
                 </li>
               </ul>
             </li>
             <li>
-              aiuto
-            </li>
-            <li class="lingua">
-              it
-            </li>
-            <li>
-              <button class="cta" type="button">
+              <button id="scopri" class="cta" type="button">
                 Scarica l'app
               </button>
             </li>
