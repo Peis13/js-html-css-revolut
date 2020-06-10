@@ -27,15 +27,17 @@ img {
 
 .navbar .logo,
 .navbar .menu,
-.navbar .menu li {
+.navbar .menu > li {
   display: inline-block;
 }
 
-.navbar-left .menu li {
+.navbar-left .menu > li {
+  padding: 10px 0;
   margin-right: 30px;
 }
 
-.navbar-right .menu li {
+.navbar-right .menu > li {
+  padding: 10px 0;
   margin-left: 30px;
 }
 
@@ -55,6 +57,20 @@ img {
   font-size: 18px;
   color: #fff;
   background-color: #eb008d;
+}
+
+.con-dropdown {
+  cursor: pointer;
+  position: relative;
+}
+
+.dropdown {
+  padding: 20px 30px;
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: red;
 }
 /* FINE STILI COMUNI */
 
