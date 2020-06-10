@@ -65,6 +65,7 @@ img {
 }
 
 .dropdown {
+  display: none;
   padding: 20px 30px;
   position: absolute;
   top: 100%;
