@@ -8,6 +8,7 @@ $(document).ready(
       function() {
 
         ruotaFreccia($(this), 180);
+        $(this).children('a').addClass('active');
         $(this).children('.dropdown').addClass('visible');
       }
     );
@@ -18,6 +19,7 @@ $(document).ready(
       function() {
 
         ruotaFreccia($(this), 0);
+        $(this).children('a').removeClass('active');
         $(this).children('.dropdown').removeClass('visible');
       }
     );
