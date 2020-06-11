@@ -32,6 +32,7 @@ img {
 .navbar {
   height: 70px;
   padding: 0 100px;
+  margin: 50px 0;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -43,23 +44,23 @@ img {
 .navbar a.active {
   color: #1c1c1c;
 }
+
 .logo {
   width: 100px;
   margin-right: 30px;
 }
 
-.navbar .logo,
-.navbar .menu,
+/* Menù */
 .navbar .menu > li {
   display: inline-block;
 }
 
-.navbar-left .menu > li {
+.menu.pagina-corrente > li {
   padding: 10px 0;
   margin-right: 30px;
 }
 
-.navbar-right .menu > li {
+.menu.navigazione > li {
   padding: 10px 0;
   margin-left: 30px;
 }
@@ -69,13 +70,10 @@ img {
   transition: 0.3s;
 }
 
-.plan,
-.lingua {
+.pagina-corrente,
+.lingua,
+.navigazione li::first-letter {
   text-transform: uppercase;
-}
-
-.navigazione {
-  text-transform: capitalize;
 }
 
 .freccia i {
@@ -97,6 +95,7 @@ img {
   opacity: 0.7;
   transition: 0.3s;
 }
+/* Fine Menù */
 
 /* Dropdown */
 .con-dropdown {
@@ -124,7 +123,7 @@ img {
 }
 
 .nuovo {
-  padding-right: 40px;
+  margin-right: 40px;
   position: relative;
 }
 
@@ -135,7 +134,7 @@ img {
   margin-left: 6px;
   position: absolute;
   top: 0;
-  left: 100;
+  left: 100%;
   transform: translateY(-50%);
 }
 /* Fine Dropdown */
