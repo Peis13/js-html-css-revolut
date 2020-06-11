@@ -40,6 +40,12 @@ img {
   letter-spacing: 0.5px;
   color: #b1b6bc;
 }
+.pagina-corrente {
+  background-color: yellow;
+}
+.navigazione {
+  background-color: pink;
+}
 
 .navbar a.active {
   color: #1c1c1c;
@@ -111,6 +117,9 @@ img {
   box-shadow: 0px 0px 10px 0px lightgray;
 }
 
+.dropdown.visible {
+  display: block;
+}
 .dropdown li {
   white-space: nowrap;
   padding: 15px 25px;
