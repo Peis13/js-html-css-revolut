@@ -31,7 +31,7 @@ img {
 /* NAVBAR */
 .navbar {
   height: 70px;
-  padding: 0 100px;
+  padding: 0 80px;
   margin: 50px 0;
   display: flex;
   justify-content: space-between;
@@ -41,10 +41,14 @@ img {
   color: #b1b6bc;
 }
 .pagina-corrente {
-  background-color: yellow;
+  /* background-color: yellow; */
 }
 .navigazione {
-  background-color: pink;
+  display: none;
+  align-items: center;
+  justify-content: space-between;
+  flex-basis: 60%;
+  /* background-color: pink; */
 }
 
 .navbar a.active {
@@ -68,7 +72,6 @@ img {
 
 .menu.navigazione > li {
   padding: 10px 0;
-  margin-left: 30px;
 }
 
 .navbar .menu > li a:hover {
@@ -147,5 +150,77 @@ img {
   transform: translateY(-50%);
 }
 /* Fine Dropdown */
+
+/* Mobile */
+.navigazione.mobile {
+  width: 100%;
+  height: 100%;
+  padding: 50px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: #fff;
+}
+
+.navigazione.mobile .dropdown {
+  top: 0;
+  left: 100%;
+  transform: translate(0, -50%);
+}
+
+.navigazione.mobile .lingua .dropdown {
+  top: 50%;
+  left: 100%;
+  transform: translate(0, -50%);
+}
+
+.navigazione.mobile .lingua .dropdown.visible {
+  display: flex;
+}
+
+.menu.navigazione.mobile > li {
+  padding: 10px 50px;
+}
+
+.navigazione.mobile .cta:after {
+  content: 'Scarica l\'app';
+  margin-left: 10px;
+}
+
+.navigazione.mobile .freccia i {
+  font-size: 15px;
+  margin-left: 5px;
+  transform: rotate(270deg);
+}
+/* Fine Mobile */
 /* FINE NAVBAR */
 /*           FINE HEADER           */
+
+/*           MEDIA QUERY           */
+@media screen and (min-width: 1200px) {
+  /* Bottone download */
+  .cta i {
+    display: none;
+  }
+
+  .cta::after {
+    content: 'Scarica l\' app';
+  }
+  /* Fine Bottone download */
+}
+
+@media screen and (min-width: 1150px) {
+  /* Navigazione */
+  .navigazione {
+    display: flex;
+  }
+  /* Fine Navigazione */
+  /* Burger */
+  .burger i {
+    display: none;
+  }
+  /* Fine Burger */
+}

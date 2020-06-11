@@ -7,9 +7,16 @@ $(document).ready(
     $('.con-dropdown').mouseenter(
       function() {
 
-        ruotaFreccia($(this), 180);
-        $(this).children('a').addClass('active');
-        $(this).children('.dropdown').addClass('visible');
+        if ($(this).parent().hasClass('mobile')) {
+          ruotaFreccia($(this), 90);
+          $(this).children('a').addClass('active');
+          $(this).children('.dropdown').addClass('visible');
+
+        } else {
+          ruotaFreccia($(this), 180);
+          $(this).children('a').addClass('active');
+          $(this).children('.dropdown').addClass('visible');
+        }
       }
     );
 
@@ -18,9 +25,17 @@ $(document).ready(
     $('.con-dropdown').mouseleave(
       function() {
 
-        ruotaFreccia($(this), 0);
-        $(this).children('a').removeClass('active');
-        $(this).children('.dropdown').removeClass('visible');
+        if ($(this).parent().hasClass('mobile')) {
+          ruotaFreccia($(this), 270);
+          $(this).children('a').removeClass('active');
+          $(this).children('.dropdown').removeClass('visible');
+
+        } else {
+
+          ruotaFreccia($(this), 0);
+          $(this).children('a').removeClass('active');
+          $(this).children('.dropdown').removeClass('visible');
+        }
       }
     );
 
@@ -31,14 +46,27 @@ $(document).ready(
     $('.navbar .menu').children('li').click(
       function() {
 
-        if ($(this).hasClass('con-dropdown')) {
-          ruotaFreccia($(this), 0);
+        if ($(this).parent().hasClass('mobile')) {
+          ruotaFreccia($(this), 270);
           $(this).children('.dropdown').toggleClass('visible');
 
         } else {
-          $('.navbar .menu li').children('.active').removeClass('active');
-          $(this).children('a').addClass('active');
+          if ($(this).hasClass('con-dropdown')) {
+            ruotaFreccia($(this), 0);
+            $(this).children('.dropdown').toggleClass('visible');
+
+          } else {
+            $('.navbar .menu li').children('.active').removeClass('active');
+            $(this).children('a').addClass('active');
+          }
         }
+      }
+    );
+
+    // Al click sul burger visualizza il menù navigazione
+    $('.burger').click(
+      function() {
+        $('.navigazione').addClass('mobile');
       }
     );
   }
@@ -51,7 +79,7 @@ function ruotaFreccia(elemento, gradi) {
   if (elemento.hasClass('freccia')) {
     elemento.find('i').css({
       'transform':'rotate(' + gradi +'deg)',
-      'transition':'0.3s'
+      'transition':'0.2s'
     });
   }
 }
